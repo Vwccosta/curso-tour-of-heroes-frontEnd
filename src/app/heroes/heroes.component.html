@@ -1,0 +1,12 @@
+<!--Todo esse rolê é para fazer um (two way data binding)é o termo dado a reatividade dos elementos na sua interface. Ou seja, o que acontece no DOM (View), reflete no JavaScript(Model), e o que acontece no JavaScript(Model), reflete no DOM(View).-->
+<!--Precisa usar {{ x}} para referenciar a variavel x-->
+<h2>{{ hero.name}} Details</h2>
+<!--por aqui eu referencio a variavel (hero) armazenada no heroes component.ts-->
+<div
+><span>id: </span>{{hero.id}}</div>
+<!--Shift+alt+baixo, copia a linha decima embaixo-->
+<div><span>Name: </span>{{hero.name}}</div>
+
+<div><label for="name"> hero name:</label>
+<input id="nome" [(ngModel)]="hero.name" placehorder="name" type="text">
+</div>
