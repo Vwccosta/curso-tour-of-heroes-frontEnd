@@ -1,0 +1,16 @@
+<h1>Dashboard </h1>
+<!--fxLayuout.xs(xs significa extra small, siginifica que é pequeno)coloco os componentes com o nome dos heroes em coluna e espaça com fxLayoutGap, flexLayout tem uma documentação no github-->
+<div
+fxLayout
+fxLayout.xs="column"
+fxLayoutGap="12px"
+fxLayoutAlign="space-between">
+
+<mat-card
+class="pointer"
+*ngFor="let hero of heroes"
+[routerLink]="['/heroes',hero.id]"
+>
+  <mat-card-title>{{hero.name}}</mat-card-title>
+</mat-card>
+</div>

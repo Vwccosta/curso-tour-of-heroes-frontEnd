@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
 //shift+alt+baixo copia a linha selecionada e cola embaixo
-import {MatButtonModule} from '@angular/material/button';
 import { MessagesComponent } from './messages/messages.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { AppRoutingModule } from './app-routing.module';
+import { CoreModule, FlexLayoutModule } from '@angular/flex-layout';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MaterialModule } from './core/material/material.module';
+
+
 
 
 @NgModule({
@@ -19,15 +22,19 @@ import {MatExpansionModule} from '@angular/material/expansion';
     HeroesComponent,
     //adicionando o componente de heroDetailComponent
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatExpansionModule
+    CoreModule,
+    AppRoutingModule,
+    FlexLayoutModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
