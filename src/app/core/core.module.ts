@@ -1,10 +1,10 @@
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MessagesComponent } from './components/messages/messages.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from '../material/material.module';
 
 const COMPONENTS = [MessagesComponent,ToolbarComponent];
 const MODULES = [FlexLayoutModule,MaterialModule, RouterModule];
@@ -14,4 +14,12 @@ const MODULES = [FlexLayoutModule,MaterialModule, RouterModule];
   imports: [CommonModule, MODULES],
   exports: [COMPONENTS, MODULES],
   })
-export class CoreModule {}
+  //Criação de uma variavel chamada parentmodel uma chamada Optional e outra chamada SkipSelf
+export class CoreModule {
+  constructor(@Optional() @SkipSelf() parentModule?: CoreModule){
+  if (parentModule){
+    throw new Error('CoreModule has already been loaded. Import this module in the AppModule.')
+  }
+}
+
+}
