@@ -1,3 +1,4 @@
+import { MenuItem } from './core/models/menu-item.model';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'curso-tour-of-heroes-frontend';
+  title = 'Tour of Heroes';
+  menuItems: MenuItem[] = [
+    {
+      icon: 'dashboard',
+      routerLink: '/dashboard',
+      toolTipText: 'Dashboard',
+    },
+    {
+      icon: 'sports_martial_arts',
+      routerLink: '/heroes',
+      toolTipText: 'HEROES',
+    }
+  ];
 }

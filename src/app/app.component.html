@@ -1,36 +1,8 @@
-
-<mat-toolbar color="primary">
-  <span>{{title}}</span>
-
-
-<span fxFlex></span>
-
-  <button mat-icon-button
-  aria-label="Dashboard"
-  routerLink="/dashboard"
-  matTooltip="Dashboard"
-  >
-
-  <mat-icon>dashboard</mat-icon>
-
-  </button>
-
-  <button mat-icon-button
-  aria-label="Heroes list"
-  routerLink="heroes/"
-  matTooltip="Heroes"
-  >
-
-  <mat-icon>sports_martial_arts</mat-icon>
-
-  </button>
-
-</mat-toolbar>
+<app-toolbar [title]="title" [menuItems]="menuItems"></app-toolbar>
 
 <div class="content" fxLayoutGap="12px">
 <!--Aqui eu estou referenciando o app heroes do selector que está dentro de heroes.component.ts
 para criar um componente o comand é ng g c heroes, para rodar no navegador é ng s -o-->
-<div class="content">
   <router-outlet></router-outlet>
 <app-messages></app-messages>
 </div>

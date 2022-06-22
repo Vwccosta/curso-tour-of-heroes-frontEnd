@@ -2,8 +2,8 @@
 import { Location } from '@angular/common';
 import { Component, OnInit, } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HeroService } from '../hero.service';
-import { Hero } from '../heroes/hero.model';
+import { HeroService } from '../core/services/hero.service';
+import { Hero } from '../core/models/hero.model';
 //@component importa o angular core
 @Component({
 //é usado o prefixo app para não ter conflito com o HTML, no angular.Json dá para mudar o prefixo padrão.

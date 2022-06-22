@@ -19,7 +19,7 @@ const MODULES = [
     MatCardModule,
     MatInputModule,
     MatTableModule,
-    MatListModule
+    MatListModule,
 ];
 
 @NgModule({
