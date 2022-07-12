@@ -5,8 +5,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 
 //Routes especifica rotas.
 const routes: Routes =[
-  {path: 'heroes/:id',component: HeroDetailComponent},
-  {path: 'heroes',component: HeroesComponent},
+  {path: ':id',component: HeroDetailComponent},
+  {path: '',component: HeroesComponent},
 ];
 
 @NgModule({

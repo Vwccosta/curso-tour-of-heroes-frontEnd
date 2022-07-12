@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { DashboardModule } from './dashboard/dashboard.module'
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -19,9 +20,8 @@ import { DashboardModule } from './dashboard/dashboard.module'
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    //feature
-    DashboardModule,
-    HeroesModule,
+    HttpClientModule,
+
   //app
     CoreModule,
     AppRoutingModule,
